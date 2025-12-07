@@ -34,7 +34,7 @@ class TaskController extends Controller
             'title'     => 'required|min:3',
             'description' => 'nullable',
             'due_date'  => 'nullable|date',
-            'is_done'   => 'nullable|boolean',
+            'is_done'   => 'nullable',
         ]);
 
         // Checkbox: si viene marcado vale "on", si no viene, es null
@@ -67,7 +67,7 @@ class TaskController extends Controller
             'title'     => 'required|min:3',
             'description' => 'nullable',
             'due_date'  => 'nullable|date',
-            'is_done'   => 'nullable|boolean',
+            'is_done'   => 'nullable',
         ]);
 
         $validated['is_done'] = $request->has('is_done');
